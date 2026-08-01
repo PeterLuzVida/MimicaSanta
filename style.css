@@ -1,0 +1,220 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#f3f4f6;
+    color:#222;
+    padding:30px;
+}
+
+h1{
+    text-align:center;
+    margin-bottom:25px;
+    color:#2c3e50;
+}
+
+h2{
+    margin-bottom:15px;
+    color:#34495e;
+}
+
+h3{
+    margin-bottom:20px;
+}
+
+.card{
+    background:white;
+    border-radius:12px;
+    padding:20px;
+    margin-bottom:20px;
+    box-shadow:0 3px 10px rgba(0,0,0,.08);
+}
+
+.card label{
+    display:block;
+    margin:10px 0;
+    cursor:pointer;
+    font-size:18px;
+}
+
+.center{
+    text-align:center;
+}
+
+button{
+
+    border:none;
+    border-radius:10px;
+    padding:16px 28px;
+
+    font-size:18px;
+
+    cursor:pointer;
+
+    margin:8px;
+
+    background:#1976d2;
+    color:white;
+
+    transition:.2s;
+}
+
+button:hover{
+
+    transform:scale(1.03);
+
+}
+
+.secondary{
+
+    background:#555;
+
+}
+
+.success{
+
+    background:#2e7d32;
+
+}
+
+.danger{
+
+    background:#c62828;
+
+}
+
+.warning{
+
+    background:#ef6c00;
+
+}
+
+.score{
+
+    display:flex;
+
+    justify-content:space-around;
+
+    text-align:center;
+
+}
+
+.score div div{
+
+    font-size:40px;
+
+    font-weight:bold;
+
+    margin-top:10px;
+
+}
+
+.hidden{
+
+    display:none;
+
+}
+
+/* ===========================
+    Tela da mímica
+=========================== */
+
+#sceneScreen{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:center;
+
+    height:90vh;
+
+    text-align:center;
+
+}
+
+#difficultyStars{
+
+    font-size:34px;
+
+    margin-bottom:20px;
+
+    color:#f39c12;
+
+}
+
+#sceneText{
+
+    font-size:58px;
+
+    font-weight:bold;
+
+    line-height:1.25;
+
+    white-space:pre-line;
+
+    max-width:1000px;
+
+    margin-bottom:40px;
+
+}
+
+#scenePoints{
+
+    font-size:34px;
+
+    color:#1976d2;
+
+    font-weight:bold;
+
+    margin-bottom:40px;
+
+}
+
+.buttons{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    justify-content:center;
+
+}
+
+@media(max-width:900px){
+
+    #sceneText{
+
+        font-size:40px;
+
+    }
+
+}
+
+@media(max-width:600px){
+
+    body{
+
+        padding:15px;
+
+    }
+
+    #sceneText{
+
+        font-size:28px;
+
+    }
+
+    button{
+
+        width:100%;
+
+    }
+
+}
