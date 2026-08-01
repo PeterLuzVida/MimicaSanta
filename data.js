@@ -1,10 +1,9 @@
-const scenes = [
+const defaultScenes = [
 
-/* ===========================
+/* =====================================================
    TEMAS CATÓLICOS
-=========================== */
+===================================================== */
 
-// Fácil
 {
     category: "catolicos",
     difficulty: "facil",
@@ -30,7 +29,6 @@ const scenes = [
     text: "Alguém se confessando com o sacerdote."
 },
 
-// Médio
 {
     category: "catolicos",
     difficulty: "medio",
@@ -50,7 +48,6 @@ const scenes = [
     text: "Um casal celebrando o matrimônio na igreja."
 },
 
-// Difícil
 {
     category: "catolicos",
     difficulty: "dificil",
@@ -71,11 +68,10 @@ const scenes = [
 },
 
 
-/* ===========================
+/* =====================================================
    TEMAS BÍBLICOS
-=========================== */
+===================================================== */
 
-// Fácil
 {
     category: "biblicos",
     difficulty: "facil",
@@ -101,7 +97,6 @@ const scenes = [
     text: "O maná caindo do céu para alimentar o povo."
 },
 
-// Médio
 {
     category: "biblicos",
     difficulty: "medio",
@@ -121,7 +116,6 @@ const scenes = [
     text: "As Tábuas da Lei sendo apresentadas ao povo."
 },
 
-// Difícil
 {
     category: "biblicos",
     difficulty: "dificil",
@@ -142,11 +136,10 @@ const scenes = [
 },
 
 
-/* ===========================
+/* =====================================================
    PASSAGENS BÍBLICAS
-=========================== */
+===================================================== */
 
-// Fácil
 {
     category: "passagens",
     difficulty: "facil",
@@ -172,7 +165,6 @@ const scenes = [
     text: "Daniel cercado pelos leões na cova."
 },
 
-// Médio
 {
     category: "passagens",
     difficulty: "medio",
@@ -192,7 +184,6 @@ const scenes = [
     text: "Jesus acalmando a tempestade no barco."
 },
 
-// Difícil
 {
     category: "passagens",
     difficulty: "dificil",
@@ -213,11 +204,10 @@ const scenes = [
 },
 
 
-/* ===========================
+/* =====================================================
    PERSONAGENS BÍBLICOS
-=========================== */
+===================================================== */
 
-// Fácil
 {
     category: "personagens",
     difficulty: "facil",
@@ -243,7 +233,6 @@ const scenes = [
     text: "João Batista batizando no rio Jordão."
 },
 
-// Médio
 {
     category: "personagens",
     difficulty: "medio",
@@ -263,7 +252,6 @@ const scenes = [
     text: "Davi tocando harpa diante do rei Saul."
 },
 
-// Difícil
 {
     category: "personagens",
     difficulty: "dificil",
