@@ -1,123 +1,461 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
     <title>Mímica Santa</title>
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet"
+          href="style.css">
+
 </head>
+
 <body>
 
-<div id="configScreen">
+<div class="container">
 
-    <h1>🎭 Santa Mímica</h1>
+    <header>
 
-    <div class="card">
+        <h1>🎭 Mímica Santa</h1>
 
-        <h2>Categorias</h2>
+        <p>
+            Escolha as categorias e a dificuldade.
+            Depois clique em <strong>Sortear</strong>.
+        </p>
 
-        <label>
-            <input type="checkbox" value="catolicos" checked onchange="updateAvailable()">
-            Temas Católicos
-        </label>
-
-        <label>
-            <input type="checkbox" value="biblicos" checked onchange="updateAvailable()">
-            Temas Bíblicos
-        </label>
-
-        <label>
-            <input type="checkbox" value="passagens" checked onchange="updateAvailable()">
-            Passagens Bíblicas
-        </label>
-
-        <label>
-            <input type="checkbox" value="personagens" checked onchange="updateAvailable()">
-            Personagens Bíblicos
-        </label>
-
-    </div>
+    </header>
 
 
-    <div class="card">
+    <!-- ========================= -->
+    <!-- CONFIGURAÇÃO             -->
+    <!-- ========================= -->
 
-        <h2>Dificuldade</h2>
+    <section id="configPanel">
 
-        <label>
-            <input type="radio"
-                   name="difficulty"
-                   value="facil"
-                   checked
-                   onchange="updateAvailable()">
+        <div class="card">
 
-            Fácil (1 ponto)
-        </label>
+            <h2>Categorias</h2>
 
-        <label>
-            <input type="radio"
-                   name="difficulty"
-                   value="medio"
-                   onchange="updateAvailable()">
+            <label>
+                <input
+                        type="checkbox"
+                        value="catolicos"
+                        checked
+                        onchange="updateAvailable()">
 
-            Médio (3 pontos)
-        </label>
+                Temas Católicos
+            </label>
 
-        <label>
-            <input type="radio"
-                   name="difficulty"
-                   value="dificil"
-                   onchange="updateAvailable()">
+            <label>
 
-            Difícil (5 pontos)
-        </label>
+                <input
+                        type="checkbox"
+                        value="biblicos"
+                        checked
+                        onchange="updateAvailable()">
 
-    </div>
+                Temas Bíblicos
 
+            </label>
 
-    <div class="card">
+            <label>
 
-        <h2>Equipe</h2>
+                <input
+                        type="checkbox"
+                        value="passagens"
+                        checked
+                        onchange="updateAvailable()">
 
-        <label>
-            <input type="radio"
-                   name="team"
-                   value="A"
-                   checked>
+                Passagens Bíblicas
 
-            Equipe A
-        </label>
+            </label>
 
-        <label>
-            <input type="radio"
-                   name="team"
-                   value="B">
+            <label>
 
-            Equipe B
-        </label>
+                <input
+                        type="checkbox"
+                        value="personagens"
+                        checked
+                        onchange="updateAvailable()">
 
-    </div>
+                Personagens Bíblicos
+
+            </label>
+
+        </div>
 
 
-    <div class="card">
+        <div class="card">
 
-        <h2>Placar</h2>
+            <h2>Dificuldade</h2>
 
-        <div class="score">
+            <label>
 
-            <div>
+                <input
+                        type="radio"
+                        name="difficulty"
+                        value="facil"
+                        checked
+                        onchange="updateAvailable()">
 
-                <strong>Equipe A</strong>
+                ⭐ Fácil (1 ponto)
 
-                <div id="scoreA">0</div>
+            </label>
+
+            <label>
+
+                <input
+                        type="radio"
+                        name="difficulty"
+                        value="medio"
+                        onchange="updateAvailable()">
+
+                ⭐⭐ Médio (3 pontos)
+
+            </label>
+
+            <label>
+
+                <input
+                        type="radio"
+                        name="difficulty"
+                        value="dificil"
+                        onchange="updateAvailable()">
+
+                ⭐⭐⭐ Difícil (5 pontos)
+
+            </label>
+
+        </div>
+
+
+        <div class="card">
+
+            <h2>Equipe da rodada</h2>
+
+            <label>
+
+                <input
+                        type="radio"
+                        name="team"
+                        value="A"
+                        checked>
+
+                Equipe A
+
+            </label>
+
+            <label>
+
+                <input
+                        type="radio"
+                        name="team"
+                        value="B">
+
+                Equipe B
+
+            </label>
+
+        </div>
+
+
+        <div class="card">
+
+            <h2>Placar</h2>
+
+            <div class="scoreBoard">
+
+                <div class="scoreItem">
+
+                    <span>Equipe A</span>
+
+                    <strong id="scoreA">0</strong>
+
+                </div>
+
+                <div class="scoreItem">
+
+                    <span>Equipe B</span>
+
+                    <strong id="scoreB">0</strong>
+
+                </div>
 
             </div>
 
-            <div>
+        </div>
 
-                <strong>Equipe B</strong>
 
-                <div id="scoreB">0</div>
+        <div class="card center">
+
+            <h2 id="availableLabel">
+
+                Disponíveis: 0
+
+            </h2>
+
+            <button
+                    class="primary"
+                    onclick="drawScene()">
+
+                🎲 Sortear Mímica
+
+            </button>
+
+            <button
+                    class="secondary"
+                    onclick="openEditor()">
+
+                ✏️ Editar Cenários
+
+            </button>
+
+            <button
+                    class="secondary"
+                    onclick="resetGame()">
+
+                🔄 Nova Partida
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ========================= -->
+    <!-- TELA DA MÍMICA            -->
+    <!-- ========================= -->
+
+    <section
+            id="scenePanel"
+            class="hidden">
+
+        <div
+                id="difficultyStars">
+
+            ⭐
+
+        </div>
+
+        <div
+                id="sceneText">
+
+        </div>
+
+        <div
+                id="scenePoints">
+
+        </div>
+
+        <div class="sceneButtons">
+
+            <button
+                    class="success"
+                    onclick="finishScene(true)">
+
+                ✅ Acertou
+
+            </button>
+
+            <button
+                    class="danger"
+                    onclick="finishScene(false)">
+
+                ❌ Errou
+
+            </button>
+
+            <button
+                    class="warning"
+                    onclick="skipScene()">
+
+                ⏭ Pular
+
+            </button>
+
+        </div>
+
+    </section>
+
+    <!-- FIM PARTE 1 -->
+
+        <!-- ========================= -->
+    <!-- MODAL EDITOR              -->
+    <!-- ========================= -->
+
+    <div id="editorModal" class="modal hidden">
+
+        <div class="modal-content">
+
+            <div class="modal-header">
+
+                <h2>✏️ Editar Cenários</h2>
+
+                <button class="closeButton"
+                        onclick="closeEditor()">
+
+                    ✖
+
+                </button>
+
+            </div>
+
+            <p class="info">
+                Escreva <strong>uma mímica por linha</strong>.
+                As alterações serão salvas no navegador.
+            </p>
+
+
+            <!-- CATÓLICOS -->
+
+            <div class="editorCard">
+
+                <h3>Temas Católicos</h3>
+
+                <label>⭐ Fácil</label>
+
+                <textarea
+                        id="catolicos-facil"
+                        rows="6"></textarea>
+
+                <label>⭐⭐ Médio</label>
+
+                <textarea
+                        id="catolicos-medio"
+                        rows="5"></textarea>
+
+                <label>⭐⭐⭐ Difícil</label>
+
+                <textarea
+                        id="catolicos-dificil"
+                        rows="5"></textarea>
+
+            </div>
+
+
+            <!-- BÍBLICOS -->
+
+            <div class="editorCard">
+
+                <h3>Temas Bíblicos</h3>
+
+                <label>⭐ Fácil</label>
+
+                <textarea
+                        id="biblicos-facil"
+                        rows="6"></textarea>
+
+                <label>⭐⭐ Médio</label>
+
+                <textarea
+                        id="biblicos-medio"
+                        rows="5"></textarea>
+
+                <label>⭐⭐⭐ Difícil</label>
+
+                <textarea
+                        id="biblicos-dificil"
+                        rows="5"></textarea>
+
+            </div>
+
+
+            <!-- PASSAGENS -->
+
+            <div class="editorCard">
+
+                <h3>Passagens Bíblicas</h3>
+
+                <label>⭐ Fácil</label>
+
+                <textarea
+                        id="passagens-facil"
+                        rows="6"></textarea>
+
+                <label>⭐⭐ Médio</label>
+
+                <textarea
+                        id="passagens-medio"
+                        rows="5"></textarea>
+
+                <label>⭐⭐⭐ Difícil</label>
+
+                <textarea
+                        id="passagens-dificil"
+                        rows="5"></textarea>
+
+            </div>
+
+
+            <!-- PERSONAGENS -->
+
+            <div class="editorCard">
+
+                <h3>Personagens Bíblicos</h3>
+
+                <label>⭐ Fácil</label>
+
+                <textarea
+                        id="personagens-facil"
+                        rows="6"></textarea>
+
+                <label>⭐⭐ Médio</label>
+
+                <textarea
+                        id="personagens-medio"
+                        rows="5"></textarea>
+
+                <label>⭐⭐⭐ Difícil</label>
+
+                <textarea
+                        id="personagens-dificil"
+                        rows="5"></textarea>
+
+            </div>
+
+
+            <!-- BOTÕES -->
+
+            <div class="editorButtons">
+
+                <button
+                        class="success"
+                        onclick="saveScenes()">
+
+                    💾 Salvar
+
+                </button>
+
+                <button
+                        class="secondary"
+                        onclick="restoreDefaultScenes()">
+
+                    ♻ Restaurar padrão
+
+                </button>
+
+                <button
+                        class="secondary"
+                        onclick="exportScenes()">
+
+                    📤 Exportar
+
+                </button>
+
+                <button
+                        class="secondary"
+                        onclick="importScenes()">
+
+                    📥 Importar
+
+                </button>
 
             </div>
 
@@ -126,59 +464,12 @@
     </div>
 
 
-    <div class="card center">
+    <input
+            id="importFile"
+            type="file"
+            accept=".json"
+            style="display:none">
 
-        <h3 id="availableLabel">
-            Disponíveis: 0
-        </h3>
-
-        <button onclick="drawScene()">
-            🎲 Sortear Mímica
-        </button>
-
-        <button class="secondary"
-                onclick="resetGame()">
-            🔄 Nova Partida
-        </button>
-
-    </div>
-
-</div>
-
-
-
-<div id="sceneScreen" class="hidden">
-
-    <div id="difficultyStars">
-        ⭐
-    </div>
-
-    <div id="sceneText">
-
-    </div>
-
-    <div id="scenePoints">
-
-    </div>
-
-    <div class="buttons">
-
-        <button class="success"
-                onclick="finishScene(true)">
-            ✅ Acertou
-        </button>
-
-        <button class="danger"
-                onclick="finishScene(false)">
-            ❌ Errou
-        </button>
-
-        <button class="warning"
-                onclick="skipScene()">
-            ⏭ Pular
-        </button>
-
-    </div>
 
 </div>
 
@@ -187,4 +478,5 @@
 <script src="app.js"></script>
 
 </body>
+
 </html>
