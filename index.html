@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mímica Santa</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="configScreen">
+
+    <h1>🎭 Mímica Santa</h1>
+
+    <div class="card">
+
+        <h2>Categorias</h2>
+
+        <label>
+            <input type="checkbox" value="catolicos" checked onchange="updateAvailable()">
+            Temas Católicos
+        </label>
+
+        <label>
+            <input type="checkbox" value="biblicos" checked onchange="updateAvailable()">
+            Temas Bíblicos
+        </label>
+
+        <label>
+            <input type="checkbox" value="passagens" checked onchange="updateAvailable()">
+            Passagens Bíblicas
+        </label>
+
+        <label>
+            <input type="checkbox" value="personagens" checked onchange="updateAvailable()">
+            Personagens Bíblicos
+        </label>
+
+    </div>
+
+
+    <div class="card">
+
+        <h2>Dificuldade</h2>
+
+        <label>
+            <input type="radio"
+                   name="difficulty"
+                   value="facil"
+                   checked
+                   onchange="updateAvailable()">
+
+            Fácil (1 ponto)
+        </label>
+
+        <label>
+            <input type="radio"
+                   name="difficulty"
+                   value="medio"
+                   onchange="updateAvailable()">
+
+            Médio (3 pontos)
+        </label>
+
+        <label>
+            <input type="radio"
+                   name="difficulty"
+                   value="dificil"
+                   onchange="updateAvailable()">
+
+            Difícil (5 pontos)
+        </label>
+
+    </div>
+
+
+    <div class="card">
+
+        <h2>Equipe</h2>
+
+        <label>
+            <input type="radio"
+                   name="team"
+                   value="A"
+                   checked>
+
+            Equipe A
+        </label>
+
+        <label>
+            <input type="radio"
+                   name="team"
+                   value="B">
+
+            Equipe B
+        </label>
+
+    </div>
+
+
+    <div class="card">
+
+        <h2>Placar</h2>
+
+        <div class="score">
+
+            <div>
+
+                <strong>Equipe A</strong>
+
+                <div id="scoreA">0</div>
+
+            </div>
+
+            <div>
+
+                <strong>Equipe B</strong>
+
+                <div id="scoreB">0</div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="card center">
+
+        <h3 id="availableLabel">
+            Disponíveis: 0
+        </h3>
+
+        <button onclick="drawScene()">
+            🎲 Sortear Mímica
+        </button>
+
+        <button class="secondary"
+                onclick="resetGame()">
+            🔄 Nova Partida
+        </button>
+
+    </div>
+
+</div>
+
+
+
+<div id="sceneScreen" class="hidden">
+
+    <div id="difficultyStars">
+        ⭐
+    </div>
+
+    <div id="sceneText">
+
+    </div>
+
+    <div id="scenePoints">
+
+    </div>
+
+    <div class="buttons">
+
+        <button class="success"
+                onclick="finishScene(true)">
+            ✅ Acertou
+        </button>
+
+        <button class="danger"
+                onclick="finishScene(false)">
+            ❌ Errou
+        </button>
+
+        <button class="warning"
+                onclick="skipScene()">
+            ⏭ Pular
+        </button>
+
+    </div>
+
+</div>
+
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+
+</body>
+</html>
