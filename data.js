@@ -1,227 +1,286 @@
 const scenes = [
 
 /* ===========================
-   FÁCIL
+   TEMAS CATÓLICOS
 =========================== */
 
+// Fácil
 {
-    category:"catolicos",
-    difficulty:"facil",
-    points:1,
-    text:"Um padre celebrando a Santa Missa"
+    category: "catolicos",
+    difficulty: "facil",
+    points: 1,
+    text: "Um padre celebrando a Santa Missa."
+},
+{
+    category: "catolicos",
+    difficulty: "facil",
+    points: 1,
+    text: "Uma pessoa rezando o terço."
+},
+{
+    category: "catolicos",
+    difficulty: "facil",
+    points: 1,
+    text: "Um coroinha tocando a sineta."
+},
+{
+    category: "catolicos",
+    difficulty: "facil",
+    points: 1,
+    text: "Alguém se confessando com o sacerdote."
 },
 
+// Médio
 {
-    category:"catolicos",
-    difficulty:"facil",
-    points:1,
-    text:"Uma pessoa rezando o terço"
+    category: "catolicos",
+    difficulty: "medio",
+    points: 3,
+    text: "Uma procissão com o Santíssimo Sacramento."
+},
+{
+    category: "catolicos",
+    difficulty: "medio",
+    points: 3,
+    text: "Um sacerdote realizando um batismo."
+},
+{
+    category: "catolicos",
+    difficulty: "medio",
+    points: 3,
+    text: "Um casal celebrando o matrimônio na igreja."
 },
 
+// Difícil
 {
-    category:"biblicos",
-    difficulty:"facil",
-    points:1,
-    text:"Um pastor cuidando das ovelhas"
+    category: "catolicos",
+    difficulty: "dificil",
+    points: 5,
+    text: "Um sacerdote incensando o altar."
 },
-
 {
-    category:"biblicos",
-    difficulty:"facil",
-    points:1,
-    text:"Um anjo aparecendo a uma pessoa"
+    category: "catolicos",
+    difficulty: "dificil",
+    points: 5,
+    text: "Os cardeais reunidos em um conclave para eleger o papa."
 },
-
 {
-    category:"passagens",
-    difficulty:"facil",
-    points:1,
-    text:"Noé construindo a arca e reunindo os animais"
-},
-
-{
-    category:"passagens",
-    difficulty:"facil",
-    points:1,
-    text:"Moisés abrindo o Mar Vermelho"
-},
-
-{
-    category:"personagens",
-    difficulty:"facil",
-    points:1,
-    text:"Sansão demonstrando sua grande força"
-},
-
-{
-    category:"personagens",
-    difficulty:"facil",
-    points:1,
-    text:"Maria segurando o Menino Jesus"
-},
-
-{
-    category:"passagens",
-    difficulty:"facil",
-    points:1,
-    text:"Jesus multiplicando os pães e os peixes"
-},
-
-{
-    category:"personagens",
-    difficulty:"facil",
-    points:1,
-    text:"São Pedro segurando as chaves do Reino"
+    category: "catolicos",
+    difficulty: "dificil",
+    points: 5,
+    text: "Um grupo representando as estações da Via-Sacra."
 },
 
 
 /* ===========================
-   MÉDIO
+   TEMAS BÍBLICOS
 =========================== */
 
+// Fácil
 {
-    category:"catolicos",
-    difficulty:"medio",
-    points:3,
-    text:"Uma procissão com o Santíssimo Sacramento"
+    category: "biblicos",
+    difficulty: "facil",
+    points: 1,
+    text: "Um pastor cuidando das ovelhas."
+},
+{
+    category: "biblicos",
+    difficulty: "facil",
+    points: 1,
+    text: "Um profeta anunciando uma mensagem de Deus."
+},
+{
+    category: "biblicos",
+    difficulty: "facil",
+    points: 1,
+    text: "Um anjo aparecendo a alguém."
+},
+{
+    category: "biblicos",
+    difficulty: "facil",
+    points: 1,
+    text: "O maná caindo do céu para alimentar o povo."
 },
 
+// Médio
 {
-    category:"catolicos",
-    difficulty:"medio",
-    points:3,
-    text:"Um sacerdote incensando o altar"
+    category: "biblicos",
+    difficulty: "medio",
+    points: 3,
+    text: "A Arca da Aliança sendo carregada."
+},
+{
+    category: "biblicos",
+    difficulty: "medio",
+    points: 3,
+    text: "Um sacrifício sendo oferecido no altar."
+},
+{
+    category: "biblicos",
+    difficulty: "medio",
+    points: 3,
+    text: "As Tábuas da Lei sendo apresentadas ao povo."
 },
 
+// Difícil
 {
-    category:"biblicos",
-    difficulty:"medio",
-    points:3,
-    text:"Um povo viajando pelo deserto"
+    category: "biblicos",
+    difficulty: "dificil",
+    points: 5,
+    text: "Um sacerdote entrando no Santo dos Santos."
 },
-
 {
-    category:"biblicos",
-    difficulty:"medio",
-    points:3,
-    text:"Uma família celebrando a Páscoa judaica"
+    category: "biblicos",
+    difficulty: "dificil",
+    points: 5,
+    text: "Um escriba copiando cuidadosamente as Sagradas Escrituras."
 },
-
 {
-    category:"passagens",
-    difficulty:"medio",
-    points:3,
-    text:"Jesus ressuscitando Lázaro"
-},
-
-{
-    category:"passagens",
-    difficulty:"medio",
-    points:3,
-    text:"O Bom Samaritano ajudando um homem ferido"
-},
-
-{
-    category:"personagens",
-    difficulty:"medio",
-    points:3,
-    text:"Abraão olhando para as estrelas"
-},
-
-{
-    category:"personagens",
-    difficulty:"medio",
-    points:3,
-    text:"José interpretando os sonhos do Faraó"
-},
-
-{
-    category:"passagens",
-    difficulty:"medio",
-    points:3,
-    text:"Jesus lavando os pés dos discípulos"
-},
-
-{
-    category:"personagens",
-    difficulty:"medio",
-    points:3,
-    text:"Tomé tocando as chagas de Jesus"
+    category: "biblicos",
+    difficulty: "dificil",
+    points: 5,
+    text: "Um rei bíblico sendo ungido com óleo."
 },
 
 
 /* ===========================
-   DIFÍCIL
+   PASSAGENS BÍBLICAS
 =========================== */
 
+// Fácil
 {
-    category:"catolicos",
-    difficulty:"dificil",
-    points:5,
-    text:"O Papa abrindo uma Porta Santa durante um Jubileu"
+    category: "passagens",
+    difficulty: "facil",
+    points: 1,
+    text: "Noé construindo a arca e reunindo os animais."
+},
+{
+    category: "passagens",
+    difficulty: "facil",
+    points: 1,
+    text: "Moisés abrindo o Mar Vermelho."
+},
+{
+    category: "passagens",
+    difficulty: "facil",
+    points: 1,
+    text: "Davi derrotando Golias com uma funda."
+},
+{
+    category: "passagens",
+    difficulty: "facil",
+    points: 1,
+    text: "Daniel cercado pelos leões na cova."
 },
 
+// Médio
 {
-    category:"catolicos",
-    difficulty:"dificil",
-    points:5,
-    text:"Um sacerdote realizando o rito do lava-pés"
+    category: "passagens",
+    difficulty: "medio",
+    points: 3,
+    text: "Jesus multiplicando os pães e os peixes."
+},
+{
+    category: "passagens",
+    difficulty: "medio",
+    points: 3,
+    text: "Pedro caminhando sobre as águas em direção a Jesus."
+},
+{
+    category: "passagens",
+    difficulty: "medio",
+    points: 3,
+    text: "Jesus acalmando a tempestade no barco."
 },
 
+// Difícil
 {
-    category:"biblicos",
-    difficulty:"dificil",
-    points:5,
-    text:"Um sacerdote colocando as mãos sobre o bode expiatório"
+    category: "passagens",
+    difficulty: "dificil",
+    points: 5,
+    text: "Jesus transformando água em vinho nas Bodas de Caná."
+},
+{
+    category: "passagens",
+    difficulty: "dificil",
+    points: 5,
+    text: "O povo derrubando as muralhas de Jericó com trombetas."
+},
+{
+    category: "passagens",
+    difficulty: "dificil",
+    points: 5,
+    text: "Jesus ressuscitando Lázaro diante do túmulo."
 },
 
+
+/* ===========================
+   PERSONAGENS BÍBLICOS
+=========================== */
+
+// Fácil
 {
-    category:"biblicos",
-    difficulty:"dificil",
-    points:5,
-    text:"O povo anunciando o Ano do Jubileu com trombetas"
+    category: "personagens",
+    difficulty: "facil",
+    points: 1,
+    text: "Sansão demonstrando sua grande força."
+},
+{
+    category: "personagens",
+    difficulty: "facil",
+    points: 1,
+    text: "Jonas sendo engolido por um grande peixe."
+},
+{
+    category: "personagens",
+    difficulty: "facil",
+    points: 1,
+    text: "Zaqueu subindo em uma árvore para ver Jesus."
+},
+{
+    category: "personagens",
+    difficulty: "facil",
+    points: 1,
+    text: "João Batista batizando no rio Jordão."
 },
 
+// Médio
 {
-    category:"passagens",
-    difficulty:"dificil",
-    points:5,
-    text:"Elias pedindo fogo do céu sobre o altar"
+    category: "personagens",
+    difficulty: "medio",
+    points: 3,
+    text: "Moisés segurando as Tábuas da Lei."
+},
+{
+    category: "personagens",
+    difficulty: "medio",
+    points: 3,
+    text: "Noé conduzindo os animais para dentro da arca."
+},
+{
+    category: "personagens",
+    difficulty: "medio",
+    points: 3,
+    text: "Davi tocando harpa diante do rei Saul."
 },
 
+// Difícil
 {
-    category:"passagens",
-    difficulty:"dificil",
-    points:5,
-    text:"Naamã mergulhando sete vezes no rio Jordão"
+    category: "personagens",
+    difficulty: "dificil",
+    points: 5,
+    text: "O rei Salomão julgando o caso das duas mulheres e do bebê."
 },
-
 {
-    category:"personagens",
-    difficulty:"dificil",
-    points:5,
-    text:"Melquisedec oferecendo pão e vinho"
+    category: "personagens",
+    difficulty: "dificil",
+    points: 5,
+    text: "Maria recebendo o anúncio do anjo Gabriel."
 },
-
 {
-    category:"personagens",
-    difficulty:"dificil",
-    points:5,
-    text:"Neemias reconstruindo a muralha com uma arma na mão"
-},
-
-{
-    category:"passagens",
-    difficulty:"dificil",
-    points:5,
-    text:"A jumenta de Balaão falando com ele"
-},
-
-{
-    category:"personagens",
-    difficulty:"dificil",
-    points:5,
-    text:"Ezequiel caminhando entre os ossos secos"
+    category: "personagens",
+    difficulty: "dificil",
+    points: 5,
+    text: "Pedro negando Jesus antes do galo cantar."
 }
 
 ];
