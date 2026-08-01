@@ -1,89 +1,117 @@
+:root{
+
+    --bg:#0f172a;
+    --panel:#1e293b;
+    --panel-light:#334155;
+
+    --gold:#d4af37;
+
+    --text:#f8fafc;
+    --text-secondary:#cbd5e1;
+
+    --primary:#2563eb;
+    --success:#16a34a;
+    --danger:#dc2626;
+    --warning:#ea580c;
+
+    --shadow:0 12px 30px rgba(0,0,0,.35);
+
+}
+
 *{
+
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:Segoe UI,Arial,sans-serif;
+
 }
 
 body{
 
-    background:#0f172a;
-    color:#f8fafc;
-    padding:30px;
+    background:var(--bg);
+
+    color:var(--text);
+
+    font-family:
+        "Segoe UI",
+        Arial,
+        sans-serif;
 
 }
 
-h1{
+.container{
+
+    max-width:1200px;
+
+    margin:auto;
+
+    padding:40px;
+
+}
+
+header{
 
     text-align:center;
-    color:#d4af37;
-    margin-bottom:30px;
-    font-size:42px;
+
+    margin-bottom:35px;
 
 }
 
-h2{
+header h1{
 
-    color:#d4af37;
-    margin-bottom:15px;
+    color:var(--gold);
+
+    font-size:44px;
+
+    margin-bottom:10px;
+
+}
+
+header p{
+
+    color:var(--text-secondary);
+
+    font-size:18px;
 
 }
 
 .card{
 
-    background:#1e293b;
+    background:var(--panel);
+
+    padding:25px;
 
     border-radius:14px;
 
-    padding:22px;
-
     margin-bottom:20px;
 
-    box-shadow:0 10px 25px rgba(0,0,0,.35);
+    box-shadow:var(--shadow);
 
 }
 
-label{
+.card h2{
+
+    color:var(--gold);
+
+    margin-bottom:18px;
+
+}
+
+.card label{
 
     display:block;
 
     margin:12px 0;
 
-    font-size:18px;
-
     cursor:pointer;
 
+    font-size:18px;
+
 }
 
-input{
+.card input{
 
     margin-right:8px;
-
-}
-
-.score{
-
-    display:flex;
-
-    justify-content:space-around;
-
-    text-align:center;
-
-}
-
-.score strong{
-
-    color:#d4af37;
-
-}
-
-.score div div{
-
-    font-size:42px;
-
-    font-weight:bold;
-
-    margin-top:10px;
 
 }
 
@@ -97,11 +125,11 @@ button{
 
     border:none;
 
-    border-radius:12px;
+    border-radius:10px;
 
-    padding:16px 30px;
+    padding:15px 28px;
 
-    font-size:18px;
+    font-size:17px;
 
     font-weight:bold;
 
@@ -109,9 +137,9 @@ button{
 
     color:white;
 
-    margin:8px;
-
     transition:.2s;
+
+    margin:8px;
 
 }
 
@@ -123,13 +151,13 @@ button:hover{
 
 button:active{
 
-    transform:scale(.98);
+    transform:scale(.97);
 
 }
 
-button{
+.primary{
 
-    background:#2563eb;
+    background:var(--primary);
 
 }
 
@@ -141,29 +169,70 @@ button{
 
 .success{
 
-    background:#16a34a;
+    background:var(--success);
 
 }
 
 .danger{
 
-    background:#dc2626;
+    background:var(--danger);
 
 }
 
 .warning{
 
-    background:#ea580c;
+    background:var(--warning);
+
+}
+
+.scoreBoard{
+
+    display:flex;
+
+    justify-content:space-around;
+
+    text-align:center;
+
+}
+
+.scoreItem span{
+
+    display:block;
+
+    color:var(--gold);
+
+    margin-bottom:8px;
+
+}
+
+.scoreItem strong{
+
+    font-size:42px;
+
+}
+
+#availableLabel{
+
+    color:var(--gold);
+
+    margin-bottom:15px;
 
 }
 
 .hidden{
 
-    display:none!important;
+    display:none !important;
 
 }
 
-#sceneScreen{
+
+/* ===========================
+        TELA DA MÍMICA
+=========================== */
+
+#scenePanel{
+
+    height:90vh;
 
     display:flex;
 
@@ -175,15 +244,13 @@ button{
 
     text-align:center;
 
-    height:92vh;
-
 }
 
 #difficultyStars{
 
-    font-size:42px;
+    color:var(--gold);
 
-    color:#d4af37;
+    font-size:42px;
 
     margin-bottom:25px;
 
@@ -195,25 +262,25 @@ button{
 
     font-weight:bold;
 
-    line-height:1.25;
+    line-height:1.3;
 
-    max-width:1100px;
+    max-width:1000px;
 
-    margin:30px 0;
+    margin:25px auto;
 
 }
 
 #scenePoints{
 
-    font-size:34px;
+    color:var(--gold);
 
-    color:#d4af37;
+    font-size:34px;
 
     margin-bottom:40px;
 
 }
 
-.buttons{
+.sceneButtons{
 
     display:flex;
 
@@ -223,42 +290,326 @@ button{
 
 }
 
-#availableLabel{
+/* ===========================
+        MODAL
+=========================== */
 
-    color:#d4af37;
+.modal{
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,.75);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:30px;
+
+    z-index:999;
+
+}
+
+.modal-content{
+
+    width:min(1200px,100%);
+
+    max-height:90vh;
+
+    overflow:auto;
+
+    background:var(--panel);
+
+    border-radius:16px;
+
+    box-shadow:var(--shadow);
+
+    padding:30px;
+
+}
+
+.modal-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
 
     margin-bottom:20px;
 
 }
 
-@media(max-width:900px){
+.modal-header h2{
 
-#sceneText{
-
-font-size:42px;
+    color:var(--gold);
 
 }
+
+.closeButton{
+
+    width:42px;
+
+    height:42px;
+
+    border-radius:50%;
+
+    background:var(--danger);
+
+    font-size:18px;
+
+    padding:0;
+
+}
+
+.info{
+
+    color:var(--text-secondary);
+
+    margin-bottom:25px;
+
+}
+
+.editorCard{
+
+    margin-bottom:30px;
+
+    padding:20px;
+
+    background:var(--panel-light);
+
+    border-radius:12px;
+
+}
+
+.editorCard h3{
+
+    color:var(--gold);
+
+    margin-bottom:20px;
+
+}
+
+.editorCard label{
+
+    display:block;
+
+    margin-top:15px;
+
+    margin-bottom:8px;
+
+    font-weight:bold;
+
+}
+
+textarea{
+
+    width:100%;
+
+    resize:vertical;
+
+    min-height:120px;
+
+    background:#0f172a;
+
+    color:white;
+
+    border:1px solid #475569;
+
+    border-radius:10px;
+
+    padding:12px;
+
+    font-size:15px;
+
+    line-height:1.6;
+
+    outline:none;
+
+    transition:.2s;
+
+}
+
+textarea:focus{
+
+    border-color:var(--gold);
+
+    box-shadow:0 0 0 2px rgba(212,175,55,.25);
+
+}
+
+.editorButtons{
+
+    display:flex;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    margin-top:20px;
+
+}
+
+/* ===========================
+        SCROLL
+=========================== */
+
+::-webkit-scrollbar{
+
+    width:12px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#0f172a;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#475569;
+
+    border-radius:10px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#64748b;
+
+}
+
+/* ===========================
+        ANIMAÇÕES
+=========================== */
+
+.card,
+.editorCard,
+button{
+
+    transition:all .2s ease;
+
+}
+
+.card:hover{
+
+    transform:translateY(-2px);
+
+}
+
+.editorCard:hover{
+
+    box-shadow:0 0 0 1px rgba(212,175,55,.25);
+
+}
+
+.modal{
+
+    animation:fadeIn .25s ease;
+
+}
+
+@keyframes fadeIn{
+
+    from{
+
+        opacity:0;
+
+    }
+
+    to{
+
+        opacity:1;
+
+    }
+
+}
+
+/* ===========================
+        RESPONSIVO
+=========================== */
+
+@media(max-width:900px){
+
+    .container{
+
+        padding:20px;
+
+    }
+
+    #sceneText{
+
+        font-size:42px;
+
+    }
+
+    .scoreBoard{
+
+        flex-direction:column;
+
+        gap:20px;
+
+    }
 
 }
 
 @media(max-width:600px){
 
-body{
+    body{
 
-padding:15px;
+        font-size:15px;
 
-}
+    }
 
-#sceneText{
+    header h1{
 
-font-size:28px;
+        font-size:34px;
 
-}
+    }
 
-button{
+    .card{
 
-width:100%;
+        padding:18px;
 
-}
+    }
+
+    button{
+
+        width:100%;
+
+        margin:8px 0;
+
+    }
+
+    .editorButtons{
+
+        flex-direction:column;
+
+    }
+
+    #sceneText{
+
+        font-size:28px;
+
+        line-height:1.4;
+
+    }
+
+    #scenePoints{
+
+        font-size:24px;
+
+    }
+
+    .modal-content{
+
+        padding:20px;
+
+    }
 
 }
